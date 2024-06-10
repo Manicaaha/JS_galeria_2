@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <div class="baner">
+        <h2>Galeria miejsc ciekawych</h2>
+    </div>
+    <div class="główny">
+        <img src="lanzarotte.jpg" alt="galeria" id="big">
+    </div>
+    <div class="lewy">
+        <h3>Przeglądaj zdjęcia</h3>
+        <img src="lanzarotte.jpg" alt="lanzarotte" onclick="mini('lanzarotte')">
+        <img src="pekin.jpg" alt="pekin" onclick="mini('pekin')">
+        <img src="serengeti.jpg" alt="serengeti" onclick="mini('serengeti')">
+        <img src="wenecja.jpg" alt="wenecja" onclick="mini('wenecja')">
+        <img src="tajlandia.jpg" alt="tajlandia" onclick="mini('tajlandia')">
+    </div>
+    <div class="prawy">
+        <h3>Obrazy w naszej galerii</h3>
+        <table>
+            <tr>
+                <td>Europa</td>
+                <td>Azja</td>
+                <td>Afryka</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p>Polub nas <img src="icon-off.png" onclick="change()" id="one"></p>
+        <a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+    </div>
+    <div class="stopka">
+        Autor: 07221201261
+    </div>
+</body>
+</html>
+
+<script>
+    let crnt_nmr = "lanzarotte"
+    function Update(){
+        document.getElementById("big").src = crnt_nmr + ".jpg"
+    }
+    function mini(mini_nmr){
+        crnt_nmr = mini_nmr
+        Update()
+    }
+    function change(){
+        let image = document.getElementById("one")
+        if(image.src.includes("icon-off.png")){
+            image.src = "icon-on.png"
+        }
+        else{
+            image.src = "icon-off.png"
+        }
+    }
+</script>

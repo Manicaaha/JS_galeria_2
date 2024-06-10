@@ -1,0 +1,4 @@
+1. SELECT `kierunek`,`czas` FROM `przyloty` WHERE `status_lotu` = "";
+2. SELECT `kierunek`,`dzien` FROM `odloty` join samoloty on odloty.samoloty_id = samoloty.id where samoloty.id = 1 or 3;
+3. SELECT `nr_rejsu`,`kierunek` FROM `przyloty` WHERE `nr_rejsu` like "%LX%";
+4. UPDATE `samoloty` SET `linie`='SWISS2' WHERE `linie` = "SWISS";
